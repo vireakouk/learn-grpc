@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package calculator;
+
+option go_package = ".;calculatorPb";
+
+service CalculatorService {
+    rpc Sum2num(Input) returns (TotalSum) {}
+}
+
+message Input {
+    float number1 = 1;
+    float number2 = 2;
+}
+
+message TotalSum {
+    float SumResult = 1;
+}
